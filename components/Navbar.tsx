@@ -4,10 +4,12 @@ import Image from "next/image";
 import {NavLinks} from "@/constants";
 import {useState} from "react";
 import AuthProviders from "@/components/AuthProviders";
+import {getCurrentSession} from "@/lib/session";
 
-const Navbar = () => {
+const Navbar = async () => {
     // const [session , setSession] = useState(null)
-    const session = null
+    const session = await getCurrentSession()
+    console.log(session)
     return (
         <nav className={"flexBetween navbar"}>
             <div className={"flex-1 flexStart gap-10"}>
@@ -24,17 +26,17 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className={"flexCenter gap-4"}>
+            <div className={"flexCenter gap-2"}>
                 {
                     session ? (
                         <>
-                            userPhoto
+                            <img className={"rounded-3xl"} src={session.user.image} width={50} height={50} alt={"huh"}/>
                             <Link href={"/create-project"}>
                                 Sharework
                             </Link>
                         </>
                     ) : (
-                        <AuthProviders />
+                            <AuthProviders />
                     )
                 }
             </div>
