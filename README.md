@@ -18,18 +18,4 @@ Mutations and Query.
 <img width="1134" alt="Screenshot 2023-07-10 at 9 38 13 PM" src="https://github.com/VenkataBhaskarr/Flexibble/assets/111889155/b92ae9aa-350c-4b97-9052-0dcc459eb491">
 
 ### grafbase
-
-
-### working with graphql
-
-1. before sending request to the server first we need to prepare the server such that it can identify the graphql queries and process them for that there is a library which we will use which will handle the requests and process the graphql queries and sends the result that is ApolloServer
-2. Implementation is as follows...
-```
-import {ApolloServer} from "@apollo/server"
-const server = new ApolloServer({
-// takes two key values
-// one is defTypes which is the graphql schema (not the database schema) which is used to process the incoming query
-// other is reactors which is used to send the response to the client by using the processed query that is defType
-})
-
-```
+It is a platform where it generate the serverless funcitons to perform CRUD operations on the database thorugh GraphQL.
