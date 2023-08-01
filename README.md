@@ -1,7 +1,7 @@
-# This project is paused for some days due to preemption by other process(work 😅)
-# This is a clone of dribble in Nextjs
+## This project is paused for some days due to preemption by other process(Academics 😅)
+## This is a clone of dribble in Nextjs
 
-## Things i have learned while doing this project are......
+### Things i have learned while doing this project are......
 
 ### headlessui
 1. headlessui divides the components into logic and design where it provides the neccessary logic and design is upto the developers 🌚.
